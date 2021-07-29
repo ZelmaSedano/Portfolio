@@ -102,6 +102,12 @@ button {
   /* positioning */
   margin: 180px 100px 100px 100px;
 }
+@media only screen and (max-width: 685px) {
+  .hero-div {
+    flex-direction: column;
+    margin: 135px 100px 100px 100px;
+  }
+}
 .my-pic {
   max-height: 150px;
   padding: 10px;
@@ -121,6 +127,12 @@ h2.hero-text {
   font-weight: 100;
   color: white;
 }
+@media only screen and (max-width: 685px) {
+  h2.hero-text {
+    font-size: 23px;
+    margin-top: 10px;
+  }
+}
 /********** END of Hero/Header Section *************/
 
 /*** About Section *****************/
@@ -135,6 +147,11 @@ section.about {
   margin: 20px 0 30px 50px;
   max-width: 700px;
   padding: 50px 90px;
+}
+@media only screen and (max-width: 685px) {
+  .about-div {
+    margin: 20px 0 30px 10px;
+  }
 }
 
 h3,
@@ -168,9 +185,7 @@ p span {
 
 /********** END of About Section *************/
 
-/* add comments to Contact Section & learn */
-
-/*** Contact Section *****************/
+/*** Contact Section ************************/
 .contact {
   margin: 10px 0 50px 0;
 }
@@ -266,13 +281,18 @@ input:focus {
   position: relative;
   font-family: 'Noto Sans JP', sans-serif;
 }
+@media (max-width: 768px) {
+  .state {
+    margin-left: 0;
+  }
+}
 
 /* dropdown menu */
 select {
   /* color & style */
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  line-height: 1.1;
+  line-height: 1;
   background-color: #ff9065;
   background-image: #ff9065;
   color: rgb(243, 243, 243);
@@ -294,10 +314,9 @@ select:focus {
 }
 @media (max-width: 768px) {
   select {
-    /* why won't it go wider??? */
-    width: 300%;
     float: none;
     text-align: center;
+    width: 360px;
   }
 }
 
@@ -320,12 +339,12 @@ select:focus {
   /* button moves down 1px when hovered over */
   transform: translateY(1px);
 }
-
 @media (max-width: 768px) {
   .submit-btn {
-    width: 100%;
+    width: 120%;
     float: none;
     text-align: center;
+    margin-top: 50px;
   }
 }
 
@@ -345,9 +364,9 @@ input[type='checkbox']:checked + label {
   height: 50px;
   margin: 600px 0 0 0;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
   .footer {
-    margin: 100px 0 0 0;
+    margin: 0px 0 0 0;
   }
 }
 .footer-div {
