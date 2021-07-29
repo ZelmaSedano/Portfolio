@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* comment */
+
+/* wraps around entire navbar */
+section.hero-and-header {
+  background-color: #ff9065;
+}
+
+.main-header {
+  /* color & styling */
+  background-color: #ff9065;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: lighter;
+  /* positioning */
+  /* this combo centers content inside div */
+  display: flex;
+  align-items: center;
+  /* this pushes the divs inside apart */
+  justify-content: space-between;
+  /* centers */
+  width: 100%;
+  position: fixed;
+  margin: auto;
+  height: 80px;
+}
+/* ZELMA VALENTIA */
+.header-text {
+  display: flex;
+  /* floats logo to left */
+  justify-self: start;
+  font-size: 30px;
+  font-weight: 300;
+  /* positioning */
+  margin-left: 70px;
+}
+
+/* hamburger menu (hidden on desktop) */
+.hamburger {
+  margin-right: 20px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 750px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.nav-div {
+  margin-right: 40px;
+}
+
+/* nav-menu: surrounds <a> tags */
+.nav-menu {
+  margin-top: 10px;
+}
+
+a {
+  /* styling */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 100;
+  /* positioning */
+  margin: 10px;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+button {
+  /* styling */
+  background-color: #ff9065;
+  border: 1px solid white;
+  border-radius: 50px;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  /* positioning */
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+/*** END Navigation Section ************/
+
+/*** Hero Section **********************/
+.hero {
+  /* centering magic */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-div {
+  /* allows text to float by image */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+
+  /* positioning */
+  margin: 180px 100px 120px 100px;
+}
+.my-pic {
+  max-height: 150px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  /* left: 0 */
+}
+.hero-div-text {
+  margin-left: 10px;
+}
+h2.hero-text {
+  padding: 7px;
+  font-size: 29px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  color: white;
+}
+/********** END of Hero/Header Section *************/
+
+/*** About Section *****************/
+section.about {
+  /* centering magic */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-div {
+  margin: 30px 0 30px 40px;
+  max-width: 700px;
+  padding: 50px 90px;
+}
+h3,
+p {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+}
+h3 {
+  margin: 20px 0;
+  color: #696969;
+}
+p {
+  font-size: 15px;
+  margin: 15px 0;
+  color: #696969;
+}
+p span {
+  color: #ff9065;
+  font-weight: 400;
+}
+
+/********** END of About Section *************/
+
+/* add comments to Contact Section & learn */
+
+/*** Contact Section *****************/
+.contact {
+  margin: 10px 0 50px 0;
+}
+@media only screen and (max-width: 900px) {
+  .contact {
+    margin: 0 auto 100px auto;
+  }
+}
+
+.contact h4 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  color: #696969;
+  text-align: center;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+@media only screen and (max-width: 768px) {
+  .input-container {
+    width: 300px;
+    margin: 20px auto;
+  }
+}
+
+/*** Styling for Input Forms ***********************/
+/* when you float things, they are taken out of the document flow; I think this is why when I try to change the margin around the parent section/div, they don't work - this form is taken out of the document flow.
+
+Luckily, I figured out a work-around where I pushed the footer further down the page to create spacing below form
+*/
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+
+.styled-input.wide {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* input fields styling */
+input {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #ff9065;
+  color: white;
+  border-radius: 4px;
+}
+input:focus {
+  outline: 0;
+}
+/* ^when you select input, it doesn't get a border around it */
+
+/* area above the input, which we aren't using, but we're styling for spacing */
+.styled-input label {
+  /* allows you to pull fields closer */
+  position: absolute;
+  top: 10px;
+  /* ^ pull fields closer */
+}
+
+/* floats phone label right */
+.phone {
+  float: right;
+}
+
+.state {
+  margin-left: 64px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* dropdown menu */
+select {
+  width: 700px;
+  height: 79px;
+  min-width: 15ch;
+  max-width: 30ch;
+  /* resets border color */
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #ff9065;
+  background-image: #ff9065;
+  color: rgb(243, 243, 243);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+}
+@media (max-width: 768px) {
+  select {
+    width: 200%;
+    float: none;
+    text-align: center;
+  }
+}
+
+/* change to button, but keep styling */
+.submit-btn {
+  float: right;
+  padding: 10px 35px;
+  border-radius: 60px;
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #ff9065;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  /* slows down the transform effect */
+  transition: all 300ms ease;
+}
+.submit-btn:hover {
+  /* button moves down 1px when hovered over */
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+input[type='checkbox'] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type='checkbox']:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+/*** Footer Section ************************/
+.footer {
+  background-color: #ff9065;
+  height: 50px;
+  margin: 600px 0 -10px 0;
+}
+@media only screen and (max-width: 750px) {
+  .footer {
+    margin: 100px 0 0 0;
+  }
+}
+.footer-div {
+  /* centering magic */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footer-div p {
+  color: white;
+}
+
+/****** MOBILE view *******/
+@media only screen and (max-width: 750px) {
+  .header-text {
+    font-size: 38px;
+    margin-left: 10px;
+  }
+
+  .nav-div {
+    display: none;
+  }
+}
+
+/* change hero-div to display block in mobile */
