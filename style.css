@@ -7,6 +7,7 @@
 /* wraps around entire navbar */
 section.hero-and-header {
   background-color: #ff9065;
+  height: 73vh;
 }
 
 .main-header {
@@ -99,7 +100,7 @@ button {
   /* justify-content: center; */
 
   /* positioning */
-  margin: 180px 100px 120px 100px;
+  margin: 180px 100px 100px 100px;
 }
 .my-pic {
   max-height: 150px;
@@ -130,7 +131,8 @@ section.about {
   justify-content: center;
 }
 .about-div {
-  margin: 30px 0 30px 50px;
+  display: inline;
+  margin: 20px 0 30px 50px;
   max-width: 700px;
   padding: 50px 90px;
 }
@@ -145,13 +147,23 @@ h3 {
   color: #696969;
 }
 p {
-  font-size: 15px;
+  font-size: 16px;
   margin: 15px 0;
   color: #696969;
 }
 p span {
   color: #ff9065;
   font-weight: 400;
+}
+
+.about-div .fa-linkedin-in,
+.about-div .fa-github,
+.about-div .fa-twitter {
+  color: #ff9065;
+  font-size: 20px;
+}
+.social-icons {
+  margin: 20px 0 0 -10px;
 }
 
 /********** END of About Section *************/
@@ -345,11 +357,21 @@ input[type='checkbox']:checked + label {
   justify-content: center;
   text-align: center;
 }
-.footer-div p {
+
+.footer p {
+  margin: 10px 10px 0 0;
+  font-size: 17px;
   color: white;
-  font-size: 18px;
   font-weight: 100;
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+.footer-div .fa-linkedin-in,
+.footer-div .fa-github,
+.footer-div .fa-twitter {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 /****** MOBILE view *******/
