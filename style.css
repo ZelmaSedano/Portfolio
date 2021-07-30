@@ -28,20 +28,22 @@ section.hero-and-header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  margin: 0 40px 0 40px;
+  margin: 0 50px;
 }
 
 .nav-logo {
   font-size: 2.8rem;
-  font-weight: 100;
+  font-weight: 200;
   color: white;
   /* spacing */
+  margin-top: 7px;
 }
 
 .nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 .nav-item {
@@ -49,7 +51,7 @@ section.hero-and-header {
 }
 
 .nav-link {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   font-weight: 100;
   color: white;
 }
@@ -67,7 +69,7 @@ button {
   font-weight: 100;
   cursor: pointer;
   /* positioning */
-  margin-left: 10px;
+  margin-left: 40px;
   padding: 5px 10px;
 }
 
@@ -87,7 +89,7 @@ button {
 
 @media only screen and (max-width: 768px) {
   .nav-menu {
-    position: fixed;
+    position: absolute;
     /* hides */
     left: -100%;
     /* pushes down */
@@ -95,10 +97,10 @@ button {
     flex-direction: column;
     background-color: #ff9065;
     width: 100%;
-    height: 78vh;
-    border-radius: 10px;
+    height: 76.5vh;
     text-align: center;
     transition: 0.3s;
+    /* fun shadow effect */
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
@@ -109,10 +111,15 @@ button {
   .nav-item {
     margin: 2.5rem 0;
   }
+  button {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 
   .hamburger {
     display: block;
     cursor: pointer;
+    margin-top: 10px;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -306,7 +313,7 @@ input {
   padding: 30px;
   border: 0;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: #ff9065;
   color: white;
   border-radius: 4px;
@@ -315,6 +322,14 @@ input:focus {
   outline: 0;
 }
 /* ^when you select input, it doesn't get a border around it */
+/* styles placeholder text */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 0.7; /* Firefox */
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+}
 
 /* area above the input, which we aren't using, but we're styling for spacing */
 .styled-input label {
@@ -329,19 +344,9 @@ input:focus {
   float: right;
 }
 
-/* styles placeholder text */
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 0.7; /* Firefox */
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 300;
-}
-
 .state {
   margin-left: 64px;
   height: 50px;
-  position: relative;
   font-family: 'Noto Sans JP', sans-serif;
 }
 @media (max-width: 768px) {
@@ -353,7 +358,7 @@ input:focus {
 /* dropdown menu */
 select {
   /* color & style */
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   cursor: pointer;
   line-height: 1;
   background-color: #ff9065;
@@ -362,13 +367,13 @@ select {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 100;
   /* why won't it go wider??? */
-  width: 353px;
-  height: 79px;
+  width: 355px;
+  height: 75px;
   min-width: 15ch;
   max-width: 30ch;
   /* resets border color */
   border: 1px solid var(--select-border);
-  border-radius: 0.25em;
+  border-radius: 5px;
   padding: 0.25em 0.5em;
 }
 /* gets rid of focus blue box effect browser adds */
@@ -438,22 +443,15 @@ input[type='checkbox']:checked + label {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-left: 20px;
 }
 
 .footer p {
-  margin: 10px 10px 0 0;
+  margin: 12px 0;
   font-size: 17px;
   color: white;
   font-weight: 100;
   font-family: 'Noto Sans JP', sans-serif;
-}
-
-.footer-div .fa-linkedin-in,
-.footer-div .fa-github,
-.footer-div .fa-twitter {
-  color: white;
-  font-size: 20px;
-  margin-bottom: 10px;
 }
 
 /****** MOBILE view *******/
