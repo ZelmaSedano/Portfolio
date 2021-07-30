@@ -11,23 +11,33 @@ section.hero-and-header {
 }
 
 .main-header {
+  /* centering magic */
+  display: flex;
+  align-items: center;
+  /* this pushes the divs inside apart */
+  justify-content: space-between;
+
   /* color & styling */
   background-color: #ff9065;
   color: white;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: lighter;
-  /* positioning */
-  /* this combo centers content inside div */
-  display: flex;
-  align-items: center;
-  /* this pushes the divs inside apart */
-  justify-content: space-between;
-  /* centers */
   width: 100%;
   position: fixed;
   margin: auto;
   height: 80px;
 }
+@media only screen and (max-width: 750px) {
+  .header-text {
+    font-size: 38px;
+    margin-left: 10px;
+  }
+
+  .nav-div {
+    display: none;
+  }
+}
+
 /* ZELMA VALENTIA */
 .header-text {
   display: flex;
@@ -44,7 +54,7 @@ section.hero-and-header {
   margin-right: 20px;
   cursor: pointer;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 768px) {
   .hamburger {
     display: none;
   }
@@ -103,7 +113,7 @@ button {
   /* positioning */
   margin: 180px 100px 100px 100px;
 }
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 768px) {
   .hero-div {
     flex-direction: column;
     margin: 135px 100px 100px 100px;
@@ -128,7 +138,7 @@ h2.hero-text {
   font-weight: 100;
   color: white;
 }
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 768px) {
   h2.hero-text {
     font-size: 23px;
     margin-top: 10px;
@@ -149,7 +159,7 @@ section.about {
   max-width: 700px;
   padding: 50px 90px;
 }
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 768px) {
   .about-div {
     margin: 20px 0 30px 10px;
   }
@@ -196,6 +206,11 @@ p span {
   }
 }
 
+.contact-text {
+  /* centering magic */
+  text-align: center;
+}
+
 .contact h4 {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 200;
@@ -231,6 +246,17 @@ Luckily, I figured out a work-around where I pushed the footer further down the 
 @media only screen and (max-width: 768px) {
   .styled-input {
     width: 100%;
+    margin-left: -20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #lname,
+  #phone,
+  #state,
+  #submit {
+    margin-left: -20px;
+    float: left;
   }
 }
 
@@ -342,7 +368,7 @@ select:focus {
 }
 @media (max-width: 768px) {
   .submit-btn {
-    width: 120%;
+    width: 100%;
     float: none;
     text-align: center;
     margin-top: 50px;
@@ -395,15 +421,5 @@ input[type='checkbox']:checked + label {
 }
 
 /****** MOBILE view *******/
-@media only screen and (max-width: 750px) {
-  .header-text {
-    font-size: 38px;
-    margin-left: 10px;
-  }
-
-  .nav-div {
-    display: none;
-  }
-}
 
 /* change hero-div to display block in mobile */

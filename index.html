@@ -23,7 +23,7 @@
 <body>
 
   <section class='hero-and-header wave'>
-    <!------------------- Header ------------------->
+    <!------------------- Header/Navbar ------------------->
     <div class='main-header'>
       <h1 class='header-text'>Zelma.</h1>
       <!-- Hamburger Menu -->
@@ -70,9 +70,9 @@
       <p>Say hi on Social Media!</p>
 
       <div class='social-icons'>
-        <a href='www.linkedin.com/in/zelma-sedano-hagberg' alt="Zelma's LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href='https://github.com/ZelmaSedano' alt="Zelma's GitHub"><i class="fab fa-github"></i></a>
-        <a href='https://twitter.com/TSockk' alt="Zelma's Instagram"><i class="fab fa-twitter"></i></a>
+        <a href='www.linkedin.com/in/zelma-sedano-hagberg' alt="Zelma's LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href='https://github.com/ZelmaSedano' alt="Zelma's GitHub"><i class="fab fa-github" target="_blank"></i></a>
+        <a href='https://twitter.com/TSockk' alt="Zelma's Instagram"><i class="fab fa-twitter" target="_blank"></i></a>
       </div>
 
     </div>
@@ -91,12 +91,12 @@
       <!-- First Name -->
       <div class="styled-input">
         <!-- input tag, holds placeholder and id's -->
-        <input type="text" id='fname' name='fname' placeholder='First Name' required />
+        <input type="text" id='fname' pattern='[A-Za-z]' name='fname' placeholder='First Name' required />
         <label for='fname'></label>
       </div>
 
       <div class="styled-input phone">
-        <input type="text" id='lname' name='lname' placeholder='Last Name' required />
+        <input type="text" id='lname' pattern='[A-Za-z]' name='lname' placeholder='Last Name' required />
         <label for='lname'></label>
       </div>
 
@@ -107,7 +107,9 @@
 
       <!-- keep phone class, it floats input right in CSS -->
       <div class='styled-input phone'>
-        <input type='tel' id='phone' name='phone' placeholder="Phone Number" required />
+        <!-- only numbers will be submitted -->
+        <input type='tel' id='phone' pattern="^\d{3}-\d{3}-\d{4}$"
+        name='phone' placeholder="Phone Number"/>
         <label for='phone'></label>
       </div>
 
@@ -118,7 +120,7 @@
       </div>
 
       <div class='styled-input'>
-        <input type="city" class="form-control" id="inputCity" placeholder="City" required>
+        <input type="city" id = 'city' class="form-control" pattern='[A-Za-z]' id="inputCity" placeholder="City" required>
       </div>
 
       <div class='styled-input state'>
@@ -180,7 +182,7 @@
       <!-- END ofAddress -->
 
       <!-- Submit Button-->
-      <button class="submit-btn">Contact Zelma</button>
+      <button class="submit-btn" id='submit'>Contact Zelma</button>
 
     </div>
   </section>
@@ -190,9 +192,9 @@
     <div class='footer-div'>
       <p>Come back soon! In the meantime...</p>
       <div class='social-icons'>
-        <a href='www.linkedin.com/in/zelma-sedano-hagberg' alt="Zelma's LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href='https://github.com/ZelmaSedano' alt="Zelma's GitHub"><i class="fab fa-github"></i></a>
-        <a href='https://twitter.com/TSockk' alt="Zelma's Instagram"><i class="fab fa-twitter"></i></a>
+        <a href='www.linkedin.com/in/zelma-sedano-hagberg' alt="Zelma's LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href='https://github.com/ZelmaSedano' alt="Zelma's GitHub"><i class="fab fa-github" target="_blank"></i></a>
+        <a href='https://twitter.com/TSockk' alt="Zelma's Instagram"><i class="fab fa-twitter" target="_blank"></i></a>
       </div>
     </div>
   </section>
