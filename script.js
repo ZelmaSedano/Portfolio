@@ -19,7 +19,9 @@ function mobileMenu() {
 //   });
 
 // 2nd attempt:
-document.querySelector('form').addEventListener('submit', function () {
+// iT WORKS!
+document.querySelector('form').addEventListener('submit', function (event) {
+  event.preventDefault();
   var a = document.getElementById('fname').value;
   var b = document.getElementById('lname').value;
   var c = document.getElementById('email').value;
