@@ -20,17 +20,24 @@ function mobileMenu() {
 
 // 2nd attempt:
 // iT WORKS!
+// select the form element
+// when you click the submit button, the stuff inside function happens
 document.querySelector('form').addEventListener('submit', function (event) {
+  // keep page from reloading
   event.preventDefault();
+
+  // selects all the values and saves their values in vars
   var a = document.getElementById('fname').value;
   var b = document.getElementById('lname').value;
   var c = document.getElementById('email').value;
   var d = document.getElementById('phone').value;
 
+  // prints the vars w/ the values
   console.log(a);
   console.log(b);
   console.log(c);
   console.log(d);
 
+  // why return false?
   return false;
 });
